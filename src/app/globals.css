@@ -18,16 +18,320 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: 'Open-Sans';
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Botões */
+.botao {
+  padding: 10px 24px 10px 24px;
+  border-radius: 14px;
+  transition: .3s;
+  border: 1px solid #02440A;
+  display: block;
+  transition: all .3s ease-in-out;
+  border: 1px solid rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.botao:hover,
+.botao:active,
+.botao:focus {
+  background-color: rgb(0 0 0 / var(--tw-text-opacity));
+  color: white;
+}
+
+.botao-outline {
+  color: #02440A;
+  border-color: transparent;
+}
+
+.botao-outline:hover,
+.botao-outline:active,
+.botao-outline:focus {
+  color: white;
+  background: linear-gradient(90deg, #006838 0%, #96CF24 100%);
+  border-color: white;
+}
+
+.botao-sucesso {
+  color: white;
+  background: linear-gradient(90deg, #006838 0%, #96CF24 100%);
+  border-color: transparent;
+}
+
+.botao-sucesso:hover,
+.botao-sucesso:active,
+.botao-sucesso:focus {
+  background-color: transparent;
+  background-image: none;
+  color: #02440A;
+  border: 1px solid #02440A;
+}
+
+/* Navbar */
+#navbar li {
+  position: relative;
+}
+
+#navbar li a::before {
+  content: '';
+  position: absolute;
+  height: 1px;
+  bottom: 0;
+  left: 35%;
+  background-color: white;
+  width: 3px;
+  transition: .7s;
+  z-index: 1;
+  opacity: 0;
+}
+
+#navbar li a::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #02440A;
+  width: 0;
+  transition: .3s;
+}
+
+#navbar li a {
+  color: #04A118;
+  display: block;
+}
+
+#navbar li a:hover {
+  color: #02440A;
+}
+
+#navbar li a:hover::after {
+  width: 50%;
+}
+
+#navbar li a:hover::before {
+  opacity: 1;
+}
+
+#language {
+  padding: 12px 0;
+  gap: 20px;
+  border-radius: 16px;
+}
+
+#language li a {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* /.Navbar */
+
+/* Footer */
+footer {
+  background-image: url('/assets/media/bg_footer.png');
+  background-position: center;
+  background-size: cover;
+}
+
+footer h3 {
+  font-size: 20px;
+}
+
+footer ul li a {
+  color: rgba(255, 255, 255, .5);
+  transition: all .3s ease-in-out;
+}
+
+footer ul li a:hover {
+  color: white;
+}
+
+footer ul.social-icons li a svg {
+  transition: all .3s ease-in-out;
+}
+
+footer ul.social-icons li a svg:hover,
+footer ul.social-icons li a svg:active,
+footer ul.social-icons li a svg:focus {
+  /* background-color: white; */
+  /* color: ; */
+  transform: scale(1.2);
+}
+
+footer #sub-rodape {
+  border-color: rgba(255, 255, 255, .5);
+}
+
+footer #sub-rodape p {
+  color: rgba(255, 255, 255, .5);
+}
+
+/* /.Footer */
+
+/* Cabeçalho */
+header {
+  background-image: url('/assets/media/home-cabecalho-image.png');
+  background-position: center 20%;
+  background-repeat: no-repeat;
+  background-size: 80vh;
+  overflow: hidden;
+  position: relative;
+  /* opacity: .7; */
+  /* z-index: -2; */
+}
+
+header:before {
+  content: "";
+  width: 580px;
+  height: 435px;
+  background-image: url(/assets/media/home-cabecalho-vetor-1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  z-index: -1;
+}
+
+header:after {
+  content: "";
+  width: 110px;
+  height: 240px;
+  background-image: url(/assets/media/home-cabecalho-vetor-2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 10%;
+  right: 0;
+  position: absolute;
+  display: inline-block;
+}
+
+.vetor3::after {
+  content: "";
+  width: 120px;
+  height: 120px;
+  background-image: url(/assets/media/home-cabecalho-vetor-3.png);
+  background-repeat: no-repeat;
+  bottom: 5rem;
+  left: 2rem;
+  position: absolute;
+  display: inline-block;
+}
+
+@media screen and (max-width: 990px) {
+  .cabecalho::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+/* /.Cabeçalho */
+
+/* Nutritionis */
+#nutritionist::after {
+  content: "";
+  width: 70px;
+  height: 360px;
+  background-image: url(/assets/media/home-section2-vetor1.png);
+  background-repeat: no-repeat;
+  top: 0;
+  right: 0;
+  position: absolute;
+  display: inline-block;
+  transform: rotate(359deg);
+}
+
+#nutritionist::before {
+  content: "";
+  width: 620px;
+  height: 170px;
+  background-image: url(/assets/media/home-section2-vetor2.png);
+  background-repeat: no-repeat;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  display: inline-block;
+}
+
+/* /.Nutritionis */
+
+/* Gym Trainer */
+#trainer .vetor1::before {
+  content: "";
+  width: 393px;
+  height: 402px;
+  background-image: url(/assets/media/home-section3-vetor1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 7rem;
+  left: -3rem;
+  position: absolute;
+}
+
+#trainer .vetor2::before {
+  content: "";
+  width: 440px;
+  height: 120px;
+  background-image: url(/assets/media/home-section3-vetor2.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+.text-custom-trainer {
+  background: linear-gradient(90deg, #006838 0%, #96CF24 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 768px) {
+  #trainer .vetor1::before {
+    left: -3rem;
+  }
+}
+
+/* /.Gym Trainer */
+
+/* Login */
+.default-header::after {
+  content: "";
+  width: 100%;
+  height: 246px;
+  background-image: url(/assets/media/login-vetor.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+/* /.Login */
+input {
+  width: 400px;
+  height: 48px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 1px solid black;
+  font-size: 14px;
+}
+
+form svg {
+  width: 20px;
+  height: 16px;
+  /* color: transparent; */
 }
