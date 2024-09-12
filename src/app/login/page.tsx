@@ -34,7 +34,7 @@ export default function Login(): ReactElement {
                 <input
                   type="text"
                   id="email"
-                  className="rounded-[14px]"
+                  className="rounded-[14px] max-sm:w-full"
                   placeholder="Email"
                 />
                 <div className="absolute inset-y-0 end-5 flex items-center opacity-30">
@@ -57,7 +57,7 @@ export default function Login(): ReactElement {
                 <input
                   type={togglePassword ? "password" : "text"}
                   id="password"
-                  className="rounded-[14px]"
+                  className="rounded-[14px] max-sm:w-full"
                   placeholder="Password"
                 />
                 <div

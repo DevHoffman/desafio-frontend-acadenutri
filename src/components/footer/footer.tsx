@@ -213,7 +213,7 @@ export default function Footer(): ReactElement {
             <div className="grid gap-[9px]">
               <h3>Subscribe Our Newsletter</h3>
               <form>
-                <div className="relative flex gap-[15px] max-sm:grid">
+                <div className="relative flex gap-[15px] max-sm:grid max-sm:items-start">
                   <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none max-sm:hidden">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

@@ -14,7 +14,7 @@ export function Botoes(): ReactElement {
   return (
     <>
       <LinkButton href="/login">Login</LinkButton>
-      <LinkButton href="button" className="botao-sucesso">
+      <LinkButton href="/" className="botao-sucesso">
         Register
       </LinkButton>
       <div className="relative inline-block text-left">

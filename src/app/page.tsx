@@ -1,11 +1,11 @@
-import Image from "next/image";
 import { ReactElement } from "react";
+import Image from "next/image";
 
 import Footer from "@/components/footer/footer";
 import Container from "@/components/layout/container";
 import Navbar from "@/components/navbar/navbar";
-import { nutritionist } from "./mock";
 import LinkButton from "@/components/linkButton/page";
+import { nutritionist } from "./mock";
 
 export default function Home(): ReactElement {
   return (
@@ -19,16 +19,20 @@ export default function Home(): ReactElement {
         <header>
           <Container>
             <div className="min-h-[100vh] max-sm:min-h-[180vh] cabecalho vetor3 grid grid-cols-3 items-start relative max-sm:grid-cols-1">
-              <div className="gap-[40px] text-black w-[407px] flex flex-col flex-wrap items-start pt-[32%] max-lg:pt-[20vh]">
-                <h1 className="text-5xl font-bold">
-                  I’m Juliana Your Personal Nutritionist
+              <div className="gap-[40px] text-black w-[407px] max-sm:w-full flex flex-col flex-wrap items-start pt-[32%] max-lg:pt-[20vh] max-sm:text-center max-sm:items-center max-sm:pt-[40%] max-sm:h-[70vh] max-sm:justify-between">
+                <h1 className="text-5xl font-bold max-sm:text-[31px]">
+                  I am Juliana Your Personal Nutritionist
                 </h1>
-                <p className="text-[14px]">
+                <p className="text-[14px] max-sm:text-[18px]">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation
                 </p>
-                <LinkButton href="#" className="botao-sucesso" title="Criar Conta">
+                <LinkButton
+                  href="#"
+                  className="botao-sucesso"
+                  title="Criar Conta"
+                >
                   Create New Account
                 </LinkButton>
               </div>
@@ -63,10 +67,8 @@ export default function Home(): ReactElement {
 
       {/* Section 2 */}
       <section>
-        <div
-          className="bg-[url('/assets/media/home-section2-background.png')] bg-cover bg-center relative overflow-hidden max-xl:pt-[15px] max-xl:pb-[45px]"
-          id="nutritionist"
-        >
+        <div className="bg-[url('/assets/media/home-section2-background.png')] bg-cover bg-center relative overflow-hidden max-xl:pt-[15px] max-xl:pb-[45px]"
+          id="nutritionist">
           <Container className="min-h-[438px] flex flex-flow gap-[15px] max-xl:gap-[30px] items-center max-xl:grid max-xl:justify-items-center max-xl:text-center">
             <div className="basis-1/2 max-xl:basis-1 grid gap-[10px] max-xl:max-w-[70%]  max-sm:max-w-[100%]">
               <h2 className="text-[82px] font-thin opacity-40 uppercase max-sm:text-[40px]">
@@ -146,9 +148,9 @@ export default function Home(): ReactElement {
               />
               <p className="text-[rgba(0,0,0,.6)] text-[14px] pl-[9px] leading-7">
                 Gyms Register, a cutting-edge gym management software, offers
-                personalized workout plans tailored to each student's unique
+                personalized workout plans tailored to each students unique
                 fitness goals and abilities. With its intuitive interface, gym
-                owners and trainers can easily manage their students' progress,
+                owners and trainers can easily manage their students progress,
                 track attendance, and generate detailed reports. By implementing
                 this software, gyms can enhance the overall gym experience for
                 their clients while increasing profitability through streamlined

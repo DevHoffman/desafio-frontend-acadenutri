@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { ReactElement, useState } from "react";
 import Image from "next/image";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
